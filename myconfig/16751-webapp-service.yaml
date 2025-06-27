@@ -9,5 +9,4 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 8001 # container port
-    #nodePort: 30001  # NodePort to access the service
+    targetPort: 8001
