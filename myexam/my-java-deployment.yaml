@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-java-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-java-app
+  template:
+    metadata:
+      labels:
+        app: my-java-app
+    spec:
+      containers:
+        - name: my-java-app
+          image: "davidhtcmail/banner-java:v3"  # Replace with your actual image name
+          ports:
+            - containerPort: 8081
+          #:
+          #  - name: JAVA_OPTS
+           #   value: "-Xms512m -Xmx1024m"  # Adjust JVM options as needed
+
+
