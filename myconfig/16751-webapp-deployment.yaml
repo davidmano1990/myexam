@@ -29,6 +29,14 @@ spec:
                 configMapKeyRef:
                   name: webapp-config-16751
                   key: WELCOME_MSG
+          volumeMounts:
+        - name: html-volume
+          mountPath: /app
+  volumes:
+    - name: html-volume
+      persistentVolumeClaim:
+        claimName: my-pvc
+
         volumes:
         - name: app-storage
           persistentVolumeClaim:
